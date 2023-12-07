@@ -1,20 +1,23 @@
 /* header */
-header {}
-header h1 {
-    text-align: left;
+header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    height: 92px;
+    align-items: center;
+    padding: 0 50px;
 }
+header h1 {}
 header h1 a {
     font-size: 1rem;
 }
-header h1 a img {}
-header nav {
-    text-align: center;
+header h1 a img {
+    width: 60px;
 }
+header nav {}
 header nav a {}
 header nav .active {color: #36b4e5;}
-header .Inb {
-    text-align: right;
-}
+header .Inb {}
 header .Inb a {}
 /* main */
 main {text-align: center;}
@@ -70,9 +73,7 @@ main .goal_strategy h2 {
     font-size: 1.313rem;
     margin-bottom: 20px;
 }
-main .goal_strategy ul {
-    
-}
+main .goal_strategy ul {}
 main .goal_strategy .goal {margin-bottom: 50px;}
 main .goal_strategy .goal li {
     width: 250px; height: 250px;
@@ -101,11 +102,21 @@ main .goal_strategy ul li p {
     line-height: 1.5;
 }
 /* footer */
-footer {font-size: 1rem;}
-footer .top {}
-footer .top .left {text-align: left;}
-footer .top .left a {}
-footer .top .right {text-align: right;}
-footer .top .right a {}
-footer address {}
+footer {font-size: 1rem;
+    padding: 40px 50px;
+}
+footer .top {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+footer .top .left {}
+footer .top .left a {font-weight: 700; padding-right: 30px;}
+footer .top .right {
+}
+footer .top .right a {
+    border: 1px solid #ccc;
+    padding: 5px 20px;
+    display: inline-block;}
+footer address {margin: 20px 0 50px 0; line-height: 1.7;}
 footer .copyright {}
