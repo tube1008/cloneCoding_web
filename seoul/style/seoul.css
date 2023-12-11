@@ -1,0 +1,83 @@
+/* header */
+header {}
+header .htop {
+    width: 1151px; height: 48px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+header .htop {}
+header .htop nav {}
+header .htop nav a {font-size: 0.875rem; margin-right: 16px; line-height: 48px;}
+header .htop nav a:last-child {margin-right: 0;}
+header .htop .h1right  {}
+header .htop .h1right a {font-size: 0.875rem; margin-left: 16px;}
+header .htop .h1right a:first-child {margin-left: 0;}
+header .hbtm {
+    width: 1151px; height: 119px; margin: 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+}
+header .hbtm h1 {width: 150px; height: 28px;}
+header .hbtm h1 a {}
+header .hbtm h1 a img {}
+header .hbtm #searchfrm {}
+header .hbtm #searchfrm fieldset {
+    width: 370px; height: 47px;
+    padding: 0 13px 0 21px;
+    border: 2px solid #1e6cb3;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    background-color: #fff;
+    align-items: center;
+}
+header .hbtm #searchfrm fieldset #userSearch {
+    width: 300px;
+    outline: none;
+    
+}
+header .hbtm #searchfrm fieldset #userSearch::placeholder {color: #1e6cb3;
+}
+header .hbtm #searchfrm fieldset #Search_Btn {width: 24px; height: 24px;}
+header .hbtm #searchfrm fieldset #Search_Btn img {}
+header .hbtm .hlang {float: right;}
+header .hbtm .hlang #langSelect {
+    border: 1px solid #1e6cb3;
+    padding: 4px 33px 5px 10px;
+}
+header .hbtm .hlang #langSelect option {}
+header .hbtm .hlang .langbtn {
+    border: 1px solid #1e6cb3;
+    background-color: #1e6cb3;
+    padding: 5px 5px 5px 5px;
+}
+header .hbtm .weather {clear: both;}
+header .hbtm .weather .currentweather{
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03rem; padding: 5px 0;
+}
+header .hbtm .weather p {
+    font-size: 0.8125rem;
+}
+/* header-top */
+/* header-bottom */
+/* main1행 */
+/* main1행-banner */
+/* main1행-right(코로나, 교통정보) */
+/* main2행-주요서비스 */
+/* main3행-배너3 */
+/* main4행-게시판 */
+/* main4행-게시판-이벤트신청 */
+/* main4행-게시판-이달행사축제 */
+/* main4행-게시판-서비스 */
+/* main5행-분야정보 */
+/* main6행-새소식 */
+/* footer */
+/* footer-1행 */
+/* footer-2행 */

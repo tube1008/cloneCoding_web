@@ -9,9 +9,9 @@
 </head>
 <body>
     <header>
-        <div class="h_top">
-            <a href="#"><img src="images/sprite/seoul.png" alt="서울시홈페이지로 가기"></a>
+        <div class="htop">
             <nav>
+                <a href="#"><img src="images/sprite/seoul.png" alt="서울시홈페이지로 가기"></a>
                 <a href="#">서울소식</a>
                 <a href="#">시민참여</a>
                 <a href="#">분야별정보</a>
@@ -20,33 +20,33 @@
                 <a href="#">정보공개</a>
                 <a href="#">응답소</a>
             </nav>
-            <div class="h1_right">
+            <div class="h1right">
                 <a href="#">로그인</a>
                 <a href="#">나의서울</a>
                 <a href="#">전자우면</a>
             </div>
         </div>
-        <div class="h_btm">
+        <div class="hbtm">
             <h1><a href="#"><img src="./images/sprite/logo_black.png" alt="서울시홈페이지 들어가기"></a></h1>
-            <form action="#" method="post" id="search_frm">
+            <form action="#" method="post" id="searchfrm">
                 <fieldset>
                     <legend class="skip">검색양식</legend>
-                    <input type="search" name="user_Search" id="user_Search" placeholder="검색어를 입력해 주세요">
-                    <button type="button" id="search_Btn"><img src="./images/sprite/search.png" alt="검색하기"></button>
-                </fieldset>
+                    <input type="search" name="userSearch" id="userSearch" placeholder="검색어를 입력해 주세요">
+                    <button type="button" id="searchBtn"><img src="./images/sprite/search.png" alt="검색하기"></button>
+                </fieldset>    
             </form>
-        </div>
-        <div class="h_lang">
-            <select name="langSelect" id="langSelect">
-                <option value="en">ENGLISH</option>
-                <option value="jp">JAPANESE</option>
-                <option value="ch">CHINESE</option>
-            </select>
-            <button type="button" id="lang_btn">GO</button>
-        </div>
-        <div class="weather">
-            <p>27.5℃</p>
-            <p>미세먼지(좋음) 초미세먼지(보통)</p>
+            <div class="hlang">
+                <select name="langSelect" id="langSelect">
+                    <option value="en">ENGLISH</option>
+                    <option value="jp">JAPANESE</option>
+                    <option value="ch">CHINESE</option>
+                </select>
+                <button type="button" class="langbtn">GO</button>
+            </div>          
+            <div class="weather">
+                <p>27.5℃</p>
+                <p>미세먼지(좋음) 초미세먼지(보통)</p>
+            </div>
         </div>
     </header>
     <main>
