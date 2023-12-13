@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/seoul.css">
     <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/seoul.css">
     <title>서울시청</title>
 </head>
 <body>
@@ -61,14 +61,14 @@
             </div>
             <div class="right">
                 <a href="#" class="corona"><img src="./images/bg_corona.gif" alt="코로나 현황">
-                    <span class="current1">20.08.18.00시 기준</span>
-                    <span class="current2"title="확진자">2,209</span>
-                    <span class="current3"title="추가 확진자">132</span>
-                    <span class="current4"title="퇴원">1,573</span>
-                    <span class="current5"title="추가 퇴원">2</span>
-                    <span class="current6"title="사망">14</span>
+                    <span class="data">20.08.18.00시 기준</span>
+                    <span class="data2"title="확진자">2,209</span>
+                    <span class="data3"title="추가 확진자">132</span>
+                    <span class="data4"title="퇴원">1,573</span>
+                    <span class="data5"title="추가 퇴원">2</span>
+                    <span class="data6"title="사망">14</span>
                 </a>
-                <a href="#" class="Traffic"><img src="./images/banner_traffic.gif" alt="서울시 실시간 교통정보 안내"></a>  
+                <a href="#" class="traffic"><img src="./images/banner_traffic.gif" alt="서울시 실시간 교통정보 안내"></a>  
             </div>
         </section>
         <section class="service">
@@ -123,13 +123,14 @@
                 </a>
             </div>
         </section>
-        <section class="sevice_Covid">
-            <div>
-                <a href="#"><img src="./images/banner_01.jpg" alt="코로나검사"></a>
-                <a href="#"><img src="./images/banner_02.jpg" alt="위반사항신고"></a>
-                <a href="#"><img src="./images/banner_03.jpg" alt="코로나지원정책"></a>
+        <!--정해진 사이트 너비(1151px) 바깥쪽으로 배경이 존재하는 경우 배경용 div를 따로 제작한다.-->
+        <div class="bnr_bg">
+            <div class="bnr">
+                <a href="#"><img src="./images/banner_03.jpg" alt="서울시민 누구나 코로나19 신체검사 신청"></a>
+                <a href="#"><img src="./images/banner_02.jpg" alt="코로나19 신고센터 집단감염 위험 준수사항 위반신고"></a>
+                <a href="#"><img src="./images/banner_01.jpg" alt="한눈에 보는 코로나19 생활경제 지원 정책"></a>
             </div>
-        </section>
+        </div>
         <section class="">
             <div class="">
                 <h2>이벤트신청</h2>

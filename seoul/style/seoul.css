@@ -12,9 +12,9 @@ header .htop {}
 header .htop nav {}
 header .htop nav a {font-size: 0.875rem; margin-right: 16px; line-height: 48px;}
 header .htop nav a:last-child {margin-right: 0;}
-header .htop .h1right  {}
-header .htop .h1right a {font-size: 0.875rem; margin-left: 16px;}
-header .htop .h1right a:first-child {margin-left: 0;}
+header .htop .right  {}
+header .htop .right a {font-size: 0.875rem; margin-left: 16px;}
+header .htop .right a:first-child {margin-left: 0;}
 header .hbtm {
     width: 1151px; height: 119px; margin: 0 auto;
     display: flex;
@@ -68,16 +68,97 @@ header .hbtm .weather p {
 /* header-top */
 /* header-bottom */
 /* main1행 */
+main {}
+main > * {width: 1151px; margin: 0 auto;}
 /* main1행-banner */
+main .visual {
+    display: flex; justify-content: space-between;
+}
+main .visual .left {
+    width: 770px;
+    position: relative;
+}
+main .visual .left a {}
+main .visual .left a img {}
+main .visual .left .close {
+    background-color: #1e6cb3;
+    color: #fff;
+    border: 1px solid #000;
+    padding: 5px 9px;
+    font-size: 0.813rem;
+    border-radius: 5px;
+    display: inline-block;
+    right: 15px; bottom: 15px;
+    position: absolute;
+}
 /* main1행-right(코로나, 교통정보) */
-/* main2행-주요서비스 */
-/* main3행-배너3 */
-/* main4행-게시판 */
+main .visual .right {
+    width: 360px;
+}
+main .visual .right .corona {
+    position: relative;
+    display: block;
+}
+main .visual .right .corona img {
+    
+}
+main .visual .right .corona .data {
+    position: absolute;
+    top: 15px; right: 20px; 
+    font-size: 0.813rem;
+}
+main .visual .right .corona .data2 {
+    position: absolute; top: 80px; left: 83px;color: #fff; font-size: 0.813rem;
+} /* 확진자 */
+main .visual .right .corona .data3 {position: absolute; top: 80px; right: 88px; color: #fff; font-size: 0.813rem; text-align: center;} /* 추가확진자 */
+main .visual .right .corona .data4 {position: absolute; bottom: 55px; left: 63px; color: #fff; font-size: 0.813rem; text-align: center;} /* 퇴원 */ 
+main .visual .right .corona .data5 {position: absolute; bottom: 55px; right: 163px; color: #fff; font-size: 0.813rem; text-align: center;} /* 추가퇴원 */
+main .visual .right .corona .data6 {position: absolute; bottom: 55px; right: 55px; color: #fff; font-size: 0.813rem; text-align: center;} /* 사망 */
+main .visual .right .traffic {}
+main .visual .right .traffic img {}
+/* main2행 */
+main .service {width: 1151px;}
+main .service .title {
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 15px 0;
+    margin-top: 50px;
+}
+main .service .title h1 {}
+main .service .title .site {}
+main .service .content {
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+main .service .content a {
+    display: flex; flex-flow: column nowrap; /*a 한테 display:flex를 적용하면 display:block을 쓴 것과 같은 의미로 적용된다  */
+    text-align: center;
+    width: 9.09%;
+}
+main .service .content a img {
+    width: 60px; margin: 0 auto;
+}
+main .service .content a span {
+    font-size: 0.813rem;
+}
+
+main .bnr_bg {
+    background-color: #eff4f8;
+    width: 1920px;
+}
+main .bnr_bg .bnr {
+    width: 1151px; margin: 0 auto;
+    display: flex;
+}
+main .bnr_bg .bnr a {}
+
 /* main4행-게시판-이벤트신청 */
 /* main4행-게시판-이달행사축제 */
 /* main4행-게시판-서비스 */
 /* main5행-분야정보 */
 /* main6행-새소식 */
+
 /* footer */
 footer {}
 footer .top{
