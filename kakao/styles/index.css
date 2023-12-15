@@ -1,44 +1,105 @@
 /* header */
 header {
-    padding: 0 20px; height: 60px;
-    background-color: rgba(0, 0, 0, 0.8);
-    position: fixed; left: 0; top: 0; width: 100%; z-index: 9999;
-    display: flex; flex-flow: row nowrap;
-    justify-content: space-between; align-items: center;
+    padding:0 20px; height:60px;
+    background:rgba(0,0,0,0.8);
+    position:fixed; left:0; top:0; width:100%; z-index:9999;
+    display:flex; flex-flow:row nowrap;
+    justify-content:space-between; align-items:center;
 }
 header h1 {}
 header h1 a {}
-header h1 a img {width: 150px;}
+header h1 a img {width:150px;}
 header nav {}
-header nav a {color: #fff; margin-right: 16px;}
-header nav a:last-child {margin-right: 0;}
-header .recruitment {color: #fff;}
-header .recruitment .fa-circle-chevron-right {color: #17a2b8;}
+header nav a {color:#fff; margin-right:16px;}
+header nav a:last-child {margin-right:0;}
+header .recruitment {color:#fff;}
+header .recruitment .fa-circle-chevron-right {color:#17a2b8;}
 /* main */
-main {}
-main .visual {}
-main .visual video {}
-main .visual .logo {}
+main {background-color:#f1f1f1; padding-bottom: 40px;}
+main .visual {
+    height:650px; overflow:hidden; position:relative;
+}
+main .visual video {width:100%;}
+main .visual .logo {
+    position:absolute; left:0; top:25%;
+    width:100%; text-align:center;
+}
 main .visual .logo img {}
-main .board {}
-main .board a {}
-main .board a .category {}
-main .board a .h2 {}
-main .board a .contents {}
+main .board, main .gallery {
+    max-width:1200px; margin:40px auto 0;
+    display:flex; flex-flow:row nowrap;
+    justify-content: space-between;
+}
+main .board a, main .gallery a {/* ,로 선택자 두개를 묶어서 효과를 줄 수 있음 */
+    background-color:#fff;
+    display:block; border-radius:5px;
+    width: calc(100% / 3 - 40px / 3);
+    padding: 15px;
+}
+main .board {
+}
+main .board a {
+    padding: 10px;
+}
+main .board a .category {margin-bottom: 15px;}
+main .board a .category:nth-child(2) {color: #aaa;}
+main .board a h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.2px;
+    line-height: 1.5;
+}
+main .board a:first-child h2 {padding-bottom: 60px;}
+main .board a .contents {line-height: 1.5;}
+main .board a:first-child .contents {color: #aaa;}
 main .gallery {}
 main .gallery a {}
-main .gallery a .category {}
+main .gallery a .category {margin-bottom: 15px;}
 main .gallery a .photo {}
-main .gallery a .photo img {}
-main .gallery a .contents {}
-main .gallery a h2 {}
+main .gallery a .photo img {width:100%;}
+main .gallery a h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.2px;
+    line-height: 1.5;
+}
+main .gallery a .contents {line-height: 1.5; color: #aaa;}
 /* footer */
-footer {}
-footer .top {}
+footer {border-top: 1px solid #777; padding: 40px 0;}
+footer .top, footer address {max-width: 1200px; margin: 0 auto;}
+footer .top {
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between; padding: 15px 0;
+    align-items: center;
+}
 footer .top .f_nav {}
-footer .top .f_nav a {}
-footer .top .site {}
-footer .top .site > a {}
-footer .top .site .sub {}
-footer .top .site .sub a {}
-footer address {}
+footer .top .f_nav a::after {
+    content: ''; display: inline-block;
+    width: 1px ; height: 14px;
+    background-color: #aaa;
+    margin: 0 7px 0 7px;
+    /* 필수 요소 */
+}
+footer .top .f_nav a:last-child::after {display: none;}
+/* border-right: 1px solid #777; padding:0 20px; */
+footer .top .site {position: relative;}
+footer .top .site > a {
+    background-color: #222; color: #fff;
+    display: block; border-radius: 5px; padding: 7px 10px;
+}
+footer .top .site .sub {
+    background-color: #fff;
+    position: absolute; top: -120px; right: 0px;
+    width: 160px;
+    border-radius: 10px;
+    border: 1px solid #777;
+    display: none;
+}
+/* site에 마우스 올리면(hover) 자식 sub가 보인다(none->block) */
+footer .top .site:hover .sub {display: block;}
+footer .top .site .sub a {
+    border-bottom : 1px solid #777;
+    padding: 10px;
+    display: block;
+}
+footer address {color: #777; line-height: 1.7;}
