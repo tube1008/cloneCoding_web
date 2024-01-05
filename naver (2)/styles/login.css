@@ -1,0 +1,4 @@
+#loginFrm, .search {background:aqua; width:460px; margin:0 auto;}
+#loginFrm fieldset {
+    display:flex; flex-flow:column nowrap;
+}

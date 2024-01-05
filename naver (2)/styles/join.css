@@ -1,0 +1,24 @@
+body, html {background:#eee;}
+#joinFrm fieldset dl {
+    width:460px; margin:0 auto;
+    display:flex; flex-flow:column nowrap;
+}
+#joinFrm fieldset dl dt {}
+#joinFrm fieldset dl dd {
+    background:#fff; padding:10px;
+}
+#joinFrm fieldset dl dd input {border:0; width:100%;}
+#joinFrm fieldset dl dd #userid {width:70%;}
+#joinFrm fieldset dl dd:nth-of-type(5) {
+    background:none; padding:10px 0;
+    display:flex; flex-flow:row nowrap;
+    justify-content: space-between;
+}
+#joinFrm fieldset dl dd:nth-of-type(5) > * {width:30%;}
+#joinFrm fieldset dl dd #gender {width:100%;}
+/* 휴대전화 */
+#joinFrm fieldset dl dd:nth-last-child(2) {
+    background:none; padding:10px 0;
+    display:flex; flex-flow:row nowrap;
+}
+#joinFrm fieldset dl dd:last-child {background:#aaa;}
