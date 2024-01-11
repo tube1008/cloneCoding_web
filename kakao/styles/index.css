@@ -15,7 +15,6 @@ header nav a:last-child {margin-right:0;}
 header .recruitment {color:#fff;}
 header .recruitment .fa-circle-chevron-right {color:#17a2b8;}
 /* main */
-<<<<<<< HEAD
 main {}
 main .visual {
     height: 650px; overflow: hidden;
@@ -25,8 +24,7 @@ main .visual video {width: 100%;}
 main .visual .logo {
     position: absolute; left: 0; top: 25%;
     width: 100%; text-align: center;
-    
-=======
+}
 main {background-color:#f1f1f1; padding-bottom: 40px;}
 main .visual {
     height:650px; overflow:hidden; position:relative;
@@ -35,7 +33,7 @@ main .visual video {width:100%;}
 main .visual .logo {
     position:absolute; left:0; top:25%;
     width:100%; text-align:center;
->>>>>>> 950344b98f4bccd7f9945ab5393a880fac71ab27
+
 }
 main .visual .logo img {}
 main .board, main .gallery {
