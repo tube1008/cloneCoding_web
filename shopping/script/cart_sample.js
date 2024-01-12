@@ -38,15 +38,19 @@ const delivery_info = item_detail.querySelector('.benefit_shipping i[class$=info
 const delivery_popup = item_detail.querySelector('.benefit_shipping .open')
 const delivery_popup_close = delivery_popup.querySelector('.close');
 console.log(delivery_info, delivery_popup, delivery_popup_close);
-
+let delivery_popup_status = false
 delivery_popup.style.display = 'none';
 delivery_info.addEventListener('click', function(){
-    delivery_popup.style.display = 'block';
+    if(delivery_popup_status = false){
+        delivery_popup.style.display = 'block';
+        delivery_menu_open_status = !delivery_menu_open_status
+    }
 })
 
 delivery_popup_close.addEventListener('click', function(){
     delivery_popup.style.display ='none';
 })
+
 
 // 목표) 배송 1/9 (화) 도착 예정 94% 메뉴를 클릭하면 메뉴 펼침 정보 나타나기
 
@@ -60,12 +64,22 @@ const open = item_detail.querySelector('.delivery_menu i[class$=up]')
 const menu = item_detail.querySelector('.delivery_menu_open')
 const delivery_menu = item_detail.querySelector('.delivery_menu')
 console.log(open, menu, delivery_menu)
-
 menu.style.display = 'none'
+let delivery_menu_open_status = false // 현재 상태 변수 (false==숨김)
 delivery_menu.addEventListener('click',function(){
-    menu.style.display ='block'
-    open.style.transform = 'scaleY(-1)';
-    delivery_menu.style = 'border-bottom-left-radius:0; border-bottom-right-radius:0;'
+    if(delivery_menu_open_status == false){
+        console.log(delivery_menu_open_status) //open
+        delivery_menu.style = 'border-bottom-left-radius:0; border-bottom-right-radius:0;'
+        open.style.transform = 'scaleY(-1)';
+        menu.style.display ='flex'
+        delivery_menu_open_status = !delivery_menu_open_status
+    }else{
+        console.log(delivery_menu_open_status) //close
+        delivery_menu.style = 'border-bottom-left-radius:5px; border-bottom-right-radius:5px;'
+        open.style.transform = 'scaleY(1)';
+        menu.style.display ='none'
+        delivery_menu_open_status = !delivery_menu_open_status
+    }
 })
 
 /* 
@@ -88,6 +102,8 @@ console.log(colorOpt.options[1].value);
 console.log(colorOpt.options[1].value.text);
 selectResult.style.display = 'none';
 
+sizeOpt.disabled = true //
+
 //colorOpt, sizeOpt text 데이터를 모두 변수로 수집후
 //createElement, appendChild 를 이용해서 opt1, opt2 선택 데이터 출력하기
 const optResult1 = document.createElement('span')
@@ -108,6 +124,8 @@ colorOpt.addEventListener('change',function(){
     console.log(colorOpt.options[colorOpt.selectedIndex].text)
     optResult1.innerHTML= colorOpt.options[colorOpt.selectedIndex].text
     console.log(resultView)
+
+    sizeOpt.disabled = false //
 })
 
 sizeOpt.addEventListener('change',function(){
