@@ -117,6 +117,7 @@ sizeOpt.addEventListener('change',function(){
     console.log(resultView)
     //선택옵션 부모 보이기
     selectResult.style.display = 'grid';
+    selectResult_status = true
     //선택 옵션 적용 대상에 위 option데이터값 출력하기
     resultView[0].appendChild(optResult1)
     resultView[0].appendChild(optResult2)
@@ -134,26 +135,46 @@ console.log(resultClose)
 resultClose.addEventListener('click',function(){
     console.log(resultClose.parentElement)
     resultClose.parentElement.style.display = 'none'
+    selectResult_status = false
 })
 
 //수량 -.+ 버튼 클릭 시 수량 값이 변경 되며 그에 따라 가격 변동
 
 minus.addEventListener('click',function(){
-    num -= 1;
+    if(num > 1){
+        num -= 1;
     numView.value = num
     total = num*price
     priceTotalView.innerHTML = price.toLocaleString('ko-kr')+'원'
     priceView.innerHTML = price.toLocaleString('ko-kr')+'원'
+    }else
+    {alert('최소 구매 수량입니다.')}
 })
-
+//최소 구매 수량 1, 최대 구매 수량 7
+// 최소 구매 수량입니다.
+// 재고 7개로 더 구매할수 없습니다.
 plus.addEventListener('click',function(){
+    if(num < 7){
     //1. 수량 1증가
     num += 1;
     //1-1. 수량1 증가한 값 표시
     numView.value = num
     //2. 수량*가격 = 구매가격
     total = num*price
-    //3. 구매가 세저리 콤파 표시
+    //3. 구매가 세자리 콤마 표시
     priceTotalView.innerHTML = price.toLocaleString('ko-kr')+'원'
     priceView.innerHTML = price.toLocaleString('ko-kr')+'원'
+    }else
+    {alert('최대 구매 수량입니다.(현재 재고 : 7)')}
+})
+
+const cartBtn = document.querySelector('#cart')
+let selectResult_status = false
+
+cartBtn.addEventListener('click',function(){
+    if(selectResult_status == false){
+        alert('상품 옵션을 선택해주세요.')
+    }else{
+        alert('장바구니에 상품이 담겼습니다.')
+    }
 })
