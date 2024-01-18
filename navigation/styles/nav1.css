@@ -15,10 +15,16 @@ header nav .gnb > li a {
 header nav .gnb > li > .lnb {
     background: #eee; width: 100px;
     position:absolute; left:50%; transform: translateX(-50%);
+    z-index: 900;
 }
 header nav .gnb > li > .lnb li:first-child {padding-top: 10px;}
 header nav .gnb > li > .lnb li:last-child {padding-bottom: 10px;}
 header nav .gnb > li > .lnb li {}
 header nav .gnb > li > .lnb li a{
     text-align: center; padding: 0 0 5px; display: block;
+}
+header .nav_bg {
+    position: absolute;
+    left: 0; top: 100px; background: #555;
+    height: 150px; width: 100%; z-index: -1;
 }
